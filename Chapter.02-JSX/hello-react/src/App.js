@@ -1,11 +1,12 @@
 import React from 'react';
 
 function App() {
-  // return React.createElement('div', null, 'Hello ', React.createElement('b', null, 'react'));
+  const name = 'React';
   return (
-    <div>
-      Hello <b>react</b>
-    </div>
+    <>
+      <div className="react">{name}</div>
+      <input />
+    </>
   );
 }
 
