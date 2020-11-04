@@ -12,7 +12,6 @@ const Info = () => {
     name: '',
     nickname: '',
   });
-
   const { name, nickname } = state;
 
   const onChange = e => {
