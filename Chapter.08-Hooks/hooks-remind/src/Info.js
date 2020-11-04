@@ -1,8 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Info = () => {
   const [name, setName] = useState('');
   const [nickname, setNickname] = useState('');
+
+  useEffect(() => {
+    console.log('렌더링이 완료되었습니다');
+    console.log({ name, nickname });
+
+    return () => {
+      console.log('cleanup');
+      console.log(name);
+    };
+    // 렌더링 기준이 될 state를 배열에 넣는다.
+  }, []);
 
   const onChangeName = e => {
     setName(e.target.value);
