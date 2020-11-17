@@ -1,7 +1,7 @@
 import { Link, Route } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
-import Profile from './Profile';
+import Profiles from './Profiles';
 
 function App() {
   return (
@@ -14,10 +14,7 @@ function App() {
           <Link to="/about">소개</Link>
         </li>
         <li>
-          <Link to="/profile/velopert">velopert 프로필</Link>
-        </li>
-        <li>
-          <Link to="/profile/gildong">gildong 프로필</Link>
+          <Link to="/profiles">프로필</Link>
         </li>
       </ul>
       <hr />
@@ -27,7 +24,7 @@ function App() {
       {/*<Route path="/info" component={About} />*/}
       {/* v5 이후로는 path에 배열로 적용하면 됨 */}
       <Route path={['/about', '/info']} component={About} />
-      <Route path="/profile/:username" component={Profile} />
+      <Route path="/profiles" component={Profiles} />
     </div>
   );
 }
