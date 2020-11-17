@@ -1,3 +1,5 @@
+// import WithRouterSample from './WithRouterSample';
+
 const data = {
   velopert: {
     name: '김민준',
@@ -21,6 +23,11 @@ function Profile({ match }) {
         {username}({profile.name})
       </h3>
       <p>{profile.description}</p>
+      {/*
+        WithRouterSample 컴포넌트가 여기서 렌더링 될 경우
+        App.js의 route 컴포넌트가 /profiles 까지만 지정되어 params가 비어있게 됨.
+      */}
+      {/*<WithRouterSample />*/}
     </div>
   );
 }
